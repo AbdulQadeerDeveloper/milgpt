@@ -23,10 +23,10 @@ const FeaturesSentiment: React.FC = () => {
           <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-bold uppercase">
             Explore <span className="text-[#997452]">Sentiment Insights</span>
           </h2>
-          <p className="text-base lg:text-lg text-[#fff]">
+          <p className="text-base lg:text-base text-[#fff] lg:w-[75%]">
             Gain a deeper understanding of customer emotions, opinions, and
-            reactions with AI-powered sentiment analysis, visual reports,
-            <br /> and real-time dashboards.
+            reactions with AI-powered sentiment analysis, visual reports, and
+            real-time dashboards.
           </p>
         </div>
       </div>
@@ -96,7 +96,7 @@ const FeaturesSentiment: React.FC = () => {
               </div>
 
               {/* Image Section */}
-              <div className="w-full md:w-[45%] xl:w-fit relative">
+              <div className="w-full md:w-[45%] xl:w-fit relative top-10">
                 <Image
                   src={FeatureSentiment.img}
                   width={500}

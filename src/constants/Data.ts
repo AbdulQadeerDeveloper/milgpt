@@ -6,7 +6,7 @@ export const HomeFeaturesData = [
     titleWhite: "Ai",
     titleBrown: "Language Training",
     description:
-      "Break down language barriers in the field with personalized AI-driven language instruction built specifically for military personnel. Train smarter with real-life simulations, mission-specific vocabulary, and accent correction.",
+      "Unlock the power of clear, confident communication with milgpt – your AI-powered language training partner. Whether you’re preparing for professional presentations, interviews, or everyday conversations, milgpt helps you refine your speaking, improve fluency, and build confidence in any language. Learn smarter, practice naturally, and speak with impact.",
     features: [
       "Learn foreign languages fast",
       "Role-based simulations (checkpoint, intel gathering, etc.)",
@@ -14,7 +14,7 @@ export const HomeFeaturesData = [
       "Voice-enabled interactive dialogues",
       "Personalized by role, region, and rank",
     ],
-    buttonText: "Write Your First Article for Free",
+    buttonText: "Start Training Now",
   },
 
   {
@@ -24,7 +24,7 @@ export const HomeFeaturesData = [
     titleWhite: "SOP and Document",
     titleBrown: "Chat Assistant",
     description:
-      "Access any military manual, protocol, or training doc in seconds. Just ask your question in natural language, and get precise answers — powered by RAG + LangChain + OpenAI.",
+      "Stay compliant and efficient with milgpt – your AI-powered SOP and Document Chat Assistant. Access critical protocols instantly, simplify complex procedures, and ensure accuracy in every step. From SOP lookups to document guidance, milgpt helps you save time, reduce errors, and always stay on protocol.",
     features: [
       "Search hundreds of SOPs and manuals instantly",
       "Supports PDF, DOCX, and structured data",
@@ -32,7 +32,7 @@ export const HomeFeaturesData = [
       " Perfect for training, briefings, and on-field decisions",
       "24/7 knowledge — no scrolling required",
     ],
-    buttonText: "Build Your Authority Today",
+    buttonText: "Access SOP Now",
   },
 
   {
@@ -42,7 +42,7 @@ export const HomeFeaturesData = [
     titleWhite: "Top Military News",
     titleBrown: "Aggregator",
     description:
-      "Stay on top of global defense updates with our AI-powered news aggregator. Automatically collects, summarizes, and categorizes military news from trusted sources — all in one place.",
+      "Stay mission-ready with the top military news aggregator powered by milgpt. Get real-time updates, critical briefings, and global defense insights — all in one place. From breaking headlines to in-depth analysis, never miss what matters in the world of security and strategy.",
     features: [
       "Mobile & command center ready",
       "Real-time defense news from global sources",
@@ -50,7 +50,7 @@ export const HomeFeaturesData = [
       "Filter by country, keyword, or force type",
       " Categorized by region (e.g., Europe, Indo-Pacific) or domain (air, land, cyber)",
     ],
-    buttonText: "Write Your First Article for Free",
+    buttonText: "Read Military News",
   },
 
   {
@@ -60,7 +60,7 @@ export const HomeFeaturesData = [
     titleWhite: "AI Report Intelligence",
     titleBrown: "Report Generator",
     description:
-      "Transform drone feeds, satellite images, and intercepted signals into actionable intelligence briefs. Powered by NLP and GenAI, this tool generates structured reports — fast, reliable, and mission-ready.",
+      "Transform overwhelming data into actionable intelligence with milgpt’s AI-powered Report Generator. From raw inputs to polished, professional intelligence reports, get accurate insights, structured analysis, and clear recommendations — instantly. Stay informed, stay decisive.",
     features: [
       "Export to PDF or encrypted formats",
       "Reduces human analysis time by 80%",
@@ -68,7 +68,7 @@ export const HomeFeaturesData = [
       " Integrates drone, satellite, and comms data",
       "Ideal for briefing commanders and field agents",
     ],
-    buttonText: "Build Your Authority Today",
+    buttonText: "Generate Report",
   },
 
   {
@@ -78,7 +78,7 @@ export const HomeFeaturesData = [
     titleWhite: "Military Info",
     titleBrown: "Chat Bot",
     description:
-      "Instant access to military-grade intelligence at your fingertips. Get quick, reliable answers about weapons, protocols, tactics, and unit structures through voice or text — anytime, anywhere.",
+      "Boost decision-making and efficiency with milgpt – the Military Info Chat Bot. Get instant answers to mission-critical questions, streamline knowledge access, and operate with confidence. From protocols to tactical insights, milgpt helps you stay sharp, smart, and always ahead.",
     features: [
       "Real-time answers to military queries",
       " Covers tactics, gear, SOPs & chains of command",
@@ -87,7 +87,7 @@ export const HomeFeaturesData = [
       "Built for field use & training environments",
     ],
 
-    buttonText: "Write Your First Article for Free",
+    buttonText: "Start Chatting",
   },
 ];
 
