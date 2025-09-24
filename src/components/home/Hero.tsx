@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import PageWrapper from "@/components/PageWrapper";
 import { BsStars } from "react-icons/bs";
@@ -12,15 +10,14 @@ const Hero = () => {
       <div className="h-full w-20 bg-background blur-xl absolute -right-4 -z-10" />
       <div className="w-[800px] h-[800px] rounded-full bg-background blur-3xl opacity-60 absolute left-[30%] -z-10" />
 
-      {/* Content */}
-      <div className="w-full md:w-[83%] lg:w-[90%] 2xl:w-2/3 flex flex-col items-center justify-center gap-5 xl:gap-7 text-center py-12 text-white">
+      <div className="w-full md:w-[83%] lg:w-[75%] 2xl:w-2/3 flex flex-col items-center justify-center gap-5 xl:gap-7 text-center py-12 text-white">
         {/* Heading */}
         <h1 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl uppercase font-extrabold leading-snug">
-          Military AI Suite: Strategize Smarter Operate Faster
+          Military AI Suite: Strategize Smarter, Operate Faster
         </h1>
 
         {/* Description */}
-        <p className="text-base lg:text-base lg:w-[80%] mx-auto   text-[#D1D5DB]">
+        <p className="text-base lg:text-lg text-[#D1D5DB] max-w-3xl">
           Deploy the power of Artificial Intelligence for modern warfare,
           strategy, and decision-making. From real-time surveillance to
           psychological operations, our tools are designed for military
