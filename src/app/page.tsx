@@ -14,7 +14,6 @@ export default function Home() {
       <Features />
       <FeaturesSentiment />
       <Challenge />
-
       <Pricing />
       <Faqs faqs={HomeFaqsData} />
       <Grid />
