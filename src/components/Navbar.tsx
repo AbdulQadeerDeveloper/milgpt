@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
@@ -11,6 +11,7 @@ const Navbar = () => {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<number | null>(
     null
   ); // Mobile
+
   const links = [
     { name: "Home", href: "/" },
     {
@@ -39,16 +40,23 @@ const Navbar = () => {
     { name: "Careers", href: "/careers" },
   ];
 
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
+
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="hidden xl:flex w-full h-[90px] sticky top-0 bg-background border-b border-white/30 z-30">
-        <div className="container mx-auto flex justify-between items-center h-full px-4 text-white">
-          <Link href="/" className="text-xl font-bold">
+      <nav className="hidden lg:flex w-full h-[90px] sticky top-0 bg-background border-b border-white/30 z-30">
+        <div className="container mx-auto flex justify-between items-center h-full px-4 md:px-8 text-white">
+          {/* Logo */}
+          <Link href="/" className="text-2xl font-bold">
             MilGPT
           </Link>
 
-          <ul className="flex items-center gap-10 font-inter">
+          {/* Links */}
+          <ul className="flex items-center gap-8 md:gap-10 font-inter text-sm md:text-base lg:text-base">
             {links.map((link, index) => (
               <li
                 key={index}
@@ -58,17 +66,17 @@ const Navbar = () => {
               >
                 <Link
                   href={link.href}
-                  className="flex items-center justify-center gap-2 group-hover:text-[#4A6B48] font-semibold transition-all duration-300"
+                  className="flex items-center gap-1 md:gap-2 group-hover:text-[#4A6B48] font-semibold transition-all duration-300"
                 >
                   {link.name}
                   {link.submenu && (
-                    <MdOutlineKeyboardArrowDown className="w-6 h-6 group-hover:rotate-180 transition-transform duration-300" />
+                    <MdOutlineKeyboardArrowDown className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-180 transition-transform duration-300" />
                   )}
                 </Link>
 
-                {/* Desktop Dropdown / Mega Dropdown */}
+                {/* Desktop Dropdown */}
                 {link.submenu && dropdownOpen === index && (
-                  <div className="absolute top-full left-0 w-[300px] bg-background text-white shadow-lg rounded-md p-4 z-50">
+                  <div className="absolute top-full left-0 w-[300px] md:w-[350px] bg-background text-white shadow-lg rounded-md p-4 z-50">
                     <ul className="flex flex-col gap-2">
                       {link.submenu.map((item, subIndex) => (
                         <li key={subIndex}>
@@ -87,40 +95,51 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="relative flex items-center gap-6">
+          {/* Contact Button */}
+          <div className="flex items-center gap-6">
             <Link href="/contact">
-              <p className="font-semibold">Contact us</p>
+              <p className="font-semibold text-sm md:text-base">Contact us</p>
             </Link>
           </div>
         </div>
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="flex xl:hidden w-full h-[90px] sticky top-0 bg-background z-30 px-4 md:px-8 justify-between items-center">
-        <Link href="/">MilGPT</Link>
+      <nav className="flex lg:hidden w-full h-[90px] sticky top-0 bg-background z-30 px-4 md:px-8 justify-between items-center">
+        {/* Logo */}
+        <Link href="/" className="text-xl font-bold text-white">
+          MilGPT
+        </Link>
+
+        {/* Hamburger */}
         <GiHamburgerMenu
           onClick={() => setIsOpen(true)}
-          className="w-6 h-6 cursor-pointer"
+          className="w-6 h-6 cursor-pointer text-white"
         />
       </nav>
 
       {/* Slide-in Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 shadow-md text-white shadow-[#4A6B48] h-full w-full md:w-[280px] bg-background z-40 transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "translate-x-[1000px]"
+        className={`fixed top-0 right-0 h-full w-full sm:w-[320px] md:w-[360px] lg:w-[400px] bg-background text-white z-40 transform transition-transform duration-300 shadow-md shadow-[#4A6B48] ${
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex justify-end p-4">
+        {/* Top bar: logo left, close right */}
+        <div className="flex justify-between items-center p-4 border-b border-white/20">
+          {/* Left: Logo */}
+          <Link href="/" className="text-xl font-bold">
+            MilGPT
+          </Link>
+
+          {/* Right: Close */}
           <IoClose
             className="w-7 h-7 cursor-pointer"
             onClick={() => setIsOpen(false)}
           />
         </div>
-        <div className="w-full py-4 px-4 flex justify-start text-xl font-bold">
-          Logo
-        </div>
 
-        <ul className="flex flex-col gap-4 p-6 font-inter">
+        {/* Mobile links */}
+        <ul className="flex flex-col gap-4 p-6 font-inter text-base">
           {links.map((link, index) => (
             <li key={index} className="w-full">
               <div
@@ -167,9 +186,10 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="flex justify-between lg:justify-end gap-10 py-2 px-6">
+        {/* Contact Button */}
+        <div className="flex justify-start md:justify-end gap-10 py-2 px-6">
           <Link href="/contact" onClick={() => setIsOpen(false)}>
-            <p className="font-semibold">Contact us</p>
+            <p className="font-semibold text-base">Contact us</p>
           </Link>
         </div>
       </div>

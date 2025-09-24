@@ -57,9 +57,9 @@ const Features: React.FC = () => {
                   {feature.titleWhite}{" "}
                   <span className="text-[#997452]">{feature.titleBrown}</span>
                 </h2>
-                <p className="text-base lg:text-lg">{feature.description}</p>
+                <p className="text-base lg:text-base">{feature.description}</p>
 
-                <Link href="#" passHref>
+                <Link href="/" passHref>
                   <button
                     className="text-sm lg:text-base w-fit px-6 py-3 cursor-pointer rounded-full 
                bg-gradient-to-r from-[#4A6B48] to-[#8C8A62] 
