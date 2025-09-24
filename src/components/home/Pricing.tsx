@@ -67,7 +67,7 @@ const Pricing = () => {
                   <h3 className="text-xl lg:text-2xl font-bold text-left uppercase">
                     {plan.title}
                   </h3>
-                  <p className="text-sm lg:text-base text-left ">
+                  <p className="text-sm lg:text-sm text-left ">
                     {plan.description}
                   </p>
                 </div>
@@ -87,10 +87,8 @@ const Pricing = () => {
                       key={index}
                       className="relative flex items-center justify-start"
                     >
-                      <FaCheckCircle className="text-[#8C8A62] absolute top-1 w-5 h-5 left-0" />
-                      <span className="text-sm lg:text-base ml-7">
-                        {feature}
-                      </span>
+                      <FaCheckCircle className="text-[#8C8A62] absolute  w-5 h-5 left-0" />
+                      <span className="text-sm lg:text-sm ml-7">{feature}</span>
                     </li>
                   ))}
                 </ul>

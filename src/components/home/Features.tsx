@@ -1,7 +1,6 @@
 import React from "react";
 import PageWrapper from "../PageWrapper";
 import Image from "next/image";
-import { FaCheckCircle } from "react-icons/fa";
 import { HomeFeaturesData } from "@/constants/Data";
 import Link from "next/link";
 
@@ -59,18 +58,6 @@ const Features: React.FC = () => {
                   <span className="text-[#997452]">{feature.titleBrown}</span>
                 </h2>
                 <p className="text-base lg:text-lg">{feature.description}</p>
-
-                <ul className="grid grid-cols-1 xl:grid-cols-2 items-center justify-between gap-4">
-                  {feature.features.map((item, index) => (
-                    <li
-                      key={index}
-                      className="relative flex items-center justify-start"
-                    >
-                      <FaCheckCircle className="text-[#8C8A62] absolute top-1 w-5 h-5 left-0" />
-                      <span className="text-sm lg:text-base ml-7">{item}</span>
-                    </li>
-                  ))}
-                </ul>
 
                 <Link href="#" passHref>
                   <button

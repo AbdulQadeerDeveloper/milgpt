@@ -30,11 +30,18 @@ const FeaturesSentiment: React.FC = () => {
               Sentiment Insights
             </span>
           </h2>
+<<<<<<< HEAD
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#997452] to-transparent rounded-full animate-expand"></div>
           <p className="text-base lg:text-lg text-[#fff] max-w-4xl leading-relaxed animate-fade-in-up delay-300">
             Gain a deeper understanding of customer emotions, opinions, and
             reactions with AI-powered sentiment analysis, visual reports,
             <br className="hidden md:block" /> and real-time dashboards.
+=======
+          <p className="text-base lg:text-base text-[#fff] lg:w-[75%]">
+            Gain a deeper understanding of customer emotions, opinions, and
+            reactions with AI-powered sentiment analysis, visual reports, and
+            real-time dashboards.
+>>>>>>> 57b8d74 (Add Sentiment Insights section with contact)
           </p>
         </div>
       </div>
@@ -128,6 +135,7 @@ const FeaturesSentiment: React.FC = () => {
               </div>
 
               {/* Image Section */}
+<<<<<<< HEAD
               <div className="w-full md:w-[45%] xl:w-fit relative group/image">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#997452]/10 to-[#6B946A]/10 rounded-3xl blur-2xl transform scale-95 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-700"></div>
                 <div className="relative z-10 transform transition-all duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-2">
@@ -140,6 +148,16 @@ const FeaturesSentiment: React.FC = () => {
                     className="object-contain relative z-10 transition-all duration-700 ease-out group-hover:drop-shadow-2xl filter group-hover:brightness-110"
                   />
                 </div>
+=======
+              <div className="w-full md:w-[45%] xl:w-fit relative top-10">
+                <Image
+                  src={FeatureSentiment.img}
+                  width={500}
+                  height={600}
+                  alt={`${FeatureSentiment.titleWhiteSentiment} ${FeatureSentiment.titleBrownSentiment} feature image`}
+                  className="object-contain transition-transform duration-500 ease-in-out hover:scale-105 hover:rotate-1"
+                />
+>>>>>>> 57b8d74 (Add Sentiment Insights section with contact)
               </div>
             </section>
           </div>
