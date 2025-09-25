@@ -37,13 +37,14 @@ const Hero = () => {
 
           {/* Button */}
           <button
-            className="px-4 py-2 lg:px-6 lg:py-3 rounded-full flex items-center justify-center gap-2 md:gap-3 
-               bg-[#4A6B48] text-white font-medium shadow-md 
-               transition-all duration-300 ease-in-out
-               hover:bg-[#997452] hover:shadow-lg"
+            className="w-full sm:w-auto px-4 py-2 sm:px-6 sm:py-3 rounded-full 
+     flex items-center justify-center gap-2 sm:gap-3 
+     bg-[#4A6B48] text-white font-medium shadow-md 
+     transition-all duration-300 ease-in-out
+     hover:bg-[#997452] hover:shadow-lg mx-auto sm:mx-0"
           >
-            <BsStars className="text-lg lg:text-xl" />
-            <span className="text-sm lg:text-base">Generate</span>
+            <BsStars className="text-lg sm:text-xl" />
+            <span className="text-sm sm:text-base">Generate</span>
           </button>
         </div>
       </div>
