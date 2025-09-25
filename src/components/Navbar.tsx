@@ -14,6 +14,7 @@ const Navbar = () => {
 
   const links = [
     { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     {
       name: "Tools",
       href: "/tools",
@@ -36,8 +37,6 @@ const Navbar = () => {
     },
     { name: "Affiliate", href: "/affiliate" },
     { name: "API", href: "/api" },
-    { name: "Creators", href: "/creators" },
-    { name: "Careers", href: "/careers" },
   ];
 
   // Lock scroll when mobile menu is open

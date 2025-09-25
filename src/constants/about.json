@@ -1,0 +1,139 @@
+{
+  "companyInfo": {
+    "name": "About Us - MilGPT",
+    "tagline": "Your AI-powered productivity partner",
+    "description": "MilGPT combines cutting-edge AI with practical tools to simplify workflows, spark creativity, and unlock new opportunities for individuals and businesses worldwide.",
+    "mission": "To empower people by making AI technology practical, accessible, and trustworthy in solving everyday challenges.",
+    "values": [
+      "Innovation with responsibility",
+      "Accessibility for all",
+      "Continuous learning and adaptation",
+      "User-first development",
+      "Transparency and trust"
+    ]
+  },
+  "history": [
+    {
+      "year": "2022",
+      "title": "Research Project",
+      "description": "MilGPT started as a small research project exploring how AI could enhance real-world productivity beyond simple chat interfaces.",
+      "image": "/home/image2-ai.mp4"
+    },
+    {
+      "year": "2023",
+      "title": "AI Assistant Launch",
+      "description": "Our first beta release introduced MilGPT as an AI assistant focused on content creation, coding help, and research support.",
+      "image": "/home/image-ai.mp4"
+    },
+    {
+      "year": "2024",
+      "title": "Global Expansion",
+      "description": "With growing adoption, MilGPT expanded its reach, introducing advanced integrations and multilingual capabilities for users worldwide.",
+      "image": "/home/ai-chart.mp4"
+    }
+  ],
+  "team": [
+    {
+      "id": "1",
+      "name": "Sarah Chen",
+      "position": "CEO & Founder",
+      "bio": "With over 15 years of experience in the industry, Sarah leads our company with vision and passion for innovation.",
+      "image": "https://randomuser.me/api/portraits/women/21.jpg",
+      "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com/in/sarahchen" },
+        { "platform": "twitter", "url": "https://twitter.com/sarahchen" }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Marcus Rodriguez",
+      "position": "CTO",
+      "bio": "Technology expert with a background in AI and machine learning. Marcus drives our technical innovation forward.",
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "socialLinks": [
+        {
+          "platform": "linkedin",
+          "url": "https://linkedin.com/in/marcusrodriguez"
+        },
+        { "platform": "github", "url": "https://github.com/marcusr" }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Priya Patel",
+      "position": "Lead Designer",
+      "bio": "Creative visionary with an eye for detail. Priya ensures our products are both beautiful and functional.",
+      "image": "https://randomuser.me/api/portraits/women/45.jpg",
+      "socialLinks": [
+        { "platform": "dribbble", "url": "https://dribbble.com/priyapatel" },
+        { "platform": "instagram", "url": "https://instagram.com/priyadesigns" }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "David Kim",
+      "position": "Marketing Director",
+      "bio": "Strategic marketer with a proven track record of building successful brands and engaging audiences.",
+      "image": "https://randomuser.me/api/portraits/men/54.jpg",
+      "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com/in/davidkim" },
+        { "platform": "twitter", "url": "https://twitter.com/davidkim" }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Elena Petrova",
+      "position": "Senior Developer",
+      "bio": "Full-stack developer specializing in React and Node.js. Elena brings complex ideas to life with clean code.",
+      "image": "https://randomuser.me/api/portraits/women/34.jpg",
+      "socialLinks": [
+        { "platform": "github", "url": "https://github.com/elenap" },
+        {
+          "platform": "linkedin",
+          "url": "https://linkedin.com/in/elenapetrova"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "James Wilson",
+      "position": "Product Manager",
+      "bio": "Product strategist who bridges the gap between technical teams and customer needs.",
+      "image": "https://randomuser.me/api/portraits/men/28.jpg",
+      "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com/in/jameswilson" }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Aisha Bello",
+      "position": "UX Researcher",
+      "bio": "User advocate who ensures our products meet real user needs through rigorous research and testing.",
+      "image": "https://randomuser.me/api/portraits/women/56.jpg",
+      "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com/in/aishabello" },
+        { "platform": "twitter", "url": "https://twitter.com/aishaux" }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Carlos Mendez",
+      "position": "DevOps Engineer",
+      "bio": "Infrastructure expert who keeps our systems running smoothly and securely at scale.",
+      "image": "https://randomuser.me/api/portraits/men/47.jpg",
+      "socialLinks": [
+        { "platform": "github", "url": "https://github.com/carlosm" },
+        {
+          "platform": "linkedin",
+          "url": "https://linkedin.com/in/carlosmendez"
+        }
+      ]
+    }
+  ],
+  "stats": [
+    { "number": "100K+", "label": "Active Users" },
+    { "number": "25+", "label": "Countries Reached" },
+    { "number": "97%", "label": "Positive Feedback" },
+    { "number": "24/7", "label": "AI Assistance" }
+  ]
+}
