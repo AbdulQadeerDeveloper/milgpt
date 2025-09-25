@@ -2,10 +2,17 @@
 
 import Grid from "@/components/home/Grid";
 import { useState, FormEvent, ChangeEvent } from "react";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaGlobe,
+} from "react-icons/fa";
 
 interface ContactForm {
   name: string;
   email: string;
+  subject: string;
   message: string;
 }
 
@@ -13,6 +20,7 @@ export default function Contact() {
   const [form, setForm] = useState<ContactForm>({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
   const [status, setStatus] = useState<string>("");
@@ -25,69 +33,120 @@ export default function Contact() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setStatus("Message sent successfully ✅");
+    setStatus("✅ Your message has been sent to the MILGPT team!");
+    setForm({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
     <>
-      <div className="min-h-screen flex flex-col bg-background text-white">
+      <div className="min-h-screen bg-black text-white">
         {/* Banner */}
-        <div className="w-full bg-gradient-to-r from-[#4A6B48] via-[#395438] to-[#2A3C29] py-8 sm:py-12 text-center shadow-md">
+        <div className="w-full  bg-[#4A6B48]  to-black py-10 sm:py-14 text-center shadow-md">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide">
-            Contact us
+            Contact - MilGPT
           </h1>
-          <p className="mt-2 text-sm sm:text-base md:text-lg text-white/80 max-w-[280px] lg:max-w-[800px] sm:max-w-xs md:max-w-md mx-auto">
-            Communicate with confidence. Reach out to us anytime.
+          <p className="mt-2 text-sm sm:text-base md:text-lg text-white/80 max-w-xl mx-auto">
+            Have questions, feedback, or collaboration ideas? Reach out to the
+            MILGPT team and we’ll get back to you.
           </p>
         </div>
 
-        {/* Contact Form Section */}
-        <div className="flex-1 flex items-center justify-center px-4 py-8 sm:py-12 md:py-16">
+        {/* Main Grid */}
+        <div className="container mx-auto grid md:grid-cols-2 gap-10 max-w-6xl px-4 py-10">
+          {/* Left Info Section */}
+          <div className="bg-[#111111] p-8 rounded-2xl shadow-lg flex flex-col justify-center">
+            <h2 className="text-3xl font-bold mb-4">Let’s Connect</h2>
+            <p className="text-white mb-6">
+              We’re here to support your AI-powered journey with MILGPT. Get in
+              touch anytime.
+            </p>
+
+            <div className="space-y-5">
+              <div className="flex items-center gap-4">
+                <FaMapMarkerAlt className="text-[#4A6B48] text-xl" />
+                <p>London, United Kingdom, E6 2JA</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <FaPhoneAlt className="text-[#4A6B48] text-xl" />
+                <p> +1 856-761-1000</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <FaEnvelope className="text-[#4A6B48] text-xl" />
+                <p>support@milgpt.com</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <FaGlobe className="text-[#4A6B48] text-xl" />
+                <p>www.milgpt.com</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Form Section */}
           <form
             onSubmit={handleSubmit}
-            className="w-full max-w-sm sm:max-w-md md:max-w-lg border border-white/10 rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl space-y-4 sm:space-y-6 md:space-y-8"
+            className="bg-[#111111] p-8 rounded-2xl shadow-lg space-y-5"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-2 sm:mb-4 md:mb-6">
-              Contact Us
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
 
+            {/* Name + Email */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Full Name"
+                className="w-full px-4 py-3 bg-transparent border border-gray-700 rounded-lg 
+                         focus:ring-2 focus:ring-[#4A6B48] outline-none"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                className="w-full px-4 py-3 bg-transparent border border-gray-700 rounded-lg 
+                         focus:ring-2 focus:ring-[#4A6B48] outline-none"
+                required
+              />
+            </div>
+
+            {/* Subject */}
             <input
               type="text"
-              name="name"
-              value={form.name}
+              name="subject"
+              value={form.subject}
               onChange={handleChange}
-              placeholder="Your Name"
-              className="w-full px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 border border-white/30 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-[#4A6B48]"
+              placeholder="Subject"
+              className="w-full px-4 py-3 bg-transparent border border-gray-700 rounded-lg 
+                       focus:ring-2 focus:ring-[#4A6B48] outline-none"
               required
             />
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              className="w-full px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 border border-white/30 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-[#4A6B48]"
-              required
-            />
+
+            {/* Message */}
             <textarea
               name="message"
               value={form.message}
               onChange={handleChange}
               rows={4}
-              placeholder="Your Message"
-              className="w-full px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 border border-white/30 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-[#4A6B48]"
+              placeholder="Message"
+              className="w-full px-4 py-3 bg-transparent border border-gray-700 rounded-lg 
+                       focus:ring-2 focus:ring-[#4A6B48] outline-none"
               required
             ></textarea>
 
+            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#4A6B48] py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-base sm:text-lg md:text-xl hover:bg-[#395438] transition-colors"
+              className="w-full bg-[#4A6B48] hover:bg-[#4A6B48] transition-colors py-3 rounded-lg font-semibold"
             >
               Send Message
             </button>
 
+            {/* Status Message */}
             {status && (
-              <p className="mt-3 sm:mt-4 text-center text-green-400 font-medium text-sm sm:text-base md:text-lg">
+              <p className="text-[#4A6B48] text-center font-medium mt-2">
                 {status}
               </p>
             )}
