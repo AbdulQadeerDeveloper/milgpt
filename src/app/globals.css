@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0d0e10;
+  --background: #0d0e10;
+  --foreground: #ffffff; /* set default text color */
 }
 
 @theme inline {
@@ -14,21 +14,21 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0d0e10;
+    --background: #0d0e10; /* stays same even in dark mode */
     --foreground: #ffffff;
   }
 }
 
 body {
-  background: var(--background);
+  background: #0d0e10 !important;
   color: var(--foreground);
   font-family: "Geist";
 }
 
 .color-black {
-  color: #0d0e10 !important;
+  color: #000 !important;
 }
 
 .bg-background {
-  background-color: #0d0e10;
+  background-color: #0d0e10 !important;
 }

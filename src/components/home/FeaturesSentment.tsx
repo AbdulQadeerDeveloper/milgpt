@@ -18,7 +18,7 @@ interface Feature {
 export const HomeSentimentData: Feature[] = [
   {
     id: 1,
-    img: "/home/charts_charts.png",
+    img: "/home/charts_charts.png.png",
     heading: "Comprehensive Sentiment Insights",
     titleWhite: "Customer",
     titleBrown: "Sentiment Analysis",
@@ -28,7 +28,7 @@ export const HomeSentimentData: Feature[] = [
   },
   {
     id: 2,
-    img: "/home/sentiment-charts.png",
+    img: "/home/sentiment-charts.png.png",
     heading: "AI-Powered Language Processing",
     titleWhite: "Natural Language",
     titleBrown: "Processing Engine",
@@ -48,7 +48,7 @@ export const HomeSentimentData: Feature[] = [
   },
   {
     id: 4,
-    img: "/home/collection-charts.png",
+    img: "/home/sentiment-bg.png",
     heading: "Customizable Sentiment Collections",
     titleWhite: "Sentiment",
     titleBrown: "Collection Tools",
@@ -61,55 +61,67 @@ export const HomeSentimentData: Feature[] = [
 const FeaturesSentment: React.FC = () => {
   return (
     <PageWrapper>
-      <div className="w-full flex flex-col gap-16 2xl:gap-24 z-10">
-        {HomeSentimentData.map((feature) => (
-          <div key={feature.id} className="relative">
-            {/* Decorative background */}
-            <Image
-              src={
-                feature.id % 2 === 0
-                  ? "/home/GreenStain.svg"
-                  : "/home/BrownStain.svg"
-              }
-              width={110}
-              height={130}
-              alt="Background Stain"
-              className="absolute -left-12 -top-20 2xl:-left-7 2xl:-top-7"
-            />
-            <Image
-              src={
-                feature.id % 2 === 0
-                  ? "/home/BrownStain.svg"
-                  : "/home/GreenStain.svg"
-              }
-              width={110}
-              height={130}
-              alt="Background Stain"
-              className="absolute -right-12 -bottom-10 2xl:-right-7 2xl:-bottom-7"
-            />
+      <div className="w-full flex flex-col gap-16 2xl:gap-24 z-10 items-center">
+        <div className="w-full flex flex-col gap-4 lg:gap-4 lg:max-w-[700px] mx-auto items-center justify-center ">
+          <h2 className="text-2xl md:text-3xl 2xl:text-4xl uppercase font-bold text-[#fff]">
+            Sentiment <span className="text-[#997452]">Analysis</span>
+          </h2>
+          <p className="text-base lg:text-base text-[#fff]">
+            Instant access to military-grade intelligence at your fingertips.
+            Get quick, reliable answers about weapons, protocols, tactics, and
+            unit structures through voice or text — anytime, anywhere.
+          </p>
+        </div>
+        {HomeSentimentData.map((feature) => {
+          // Conditional button styles
+          const buttonClasses =
+            feature.id === 1 || feature.id === 3
+              ? "bg-gradient-to-r from-[#4A6B48] to-[#8C8A62] hover:from-[#997452] hover:to-[#997452]"
+              : "bg-[#997452] hover:bg-[#6B4E32]";
 
+          return (
             <section
-              className={`w-full flex ${
-                feature.id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } flex-col items-start justify-between gap-6 lg:gap-10 px-0 2xl:px-16`}
+              key={feature.id}
+              className={`relative w-full max-w-[1308px] min-h-[388px] 
+    flex ${feature.id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}
+    flex-col items-start justify-between gap-6 lg:gap-10
+    px-[60px] py-[60px] 
+    bg-[#0d0e10] border border-[#997452] rounded-[25px]
+    shadow-[0px_12.58px_35.93px_0px_#99745240] overflow-hidden`}
             >
+              {/* Decorative Background Images */}
+              <Image
+                src="/home/GreenStain.svg"
+                alt="decor top left"
+                width={110}
+                height={130}
+                className="absolute -top-5 -left-5 z-0 pointer-events-none"
+              />
+              <Image
+                src="/home/BrownStain.svg"
+                alt="decor bottom right"
+                width={110}
+                height={130}
+                className="absolute -bottom-5 -right-5 z-0 pointer-events-none"
+              />
+
               {/* Text Section */}
-              <div className="w-full md:w-[55%] xl:w-1/2 flex flex-col items-start justify-center gap-4 lg:gap-6 text-left text-white">
+              <div className="w-full md:w-[55%] xl:w-1/2 flex flex-col items-start justify-center gap-4 lg:gap-6 text-left text-white relative z-10">
                 <h3 className="text-xs xl:text-sm border border-[#6B946A] rounded-full px-4 py-1 uppercase">
                   {feature.heading}
                 </h3>
-                <h2 className="text-2xl md:text-3xl 2xl:text-4xl uppercase font-bold">
+                <h2 className="text-1xl md:text-2xl lg:text-[20px] 2xl:text-2xl uppercase font-bold">
                   {feature.titleWhite}{" "}
                   <span className="text-[#997452]">{feature.titleBrown}</span>
                 </h2>
-                <p className="text-base lg:text-lg">{feature.description}</p>
-                <Link href="#" passHref>
+                <p className="text-base lg:text-[12px]">
+                  {feature.description}
+                </p>
+                <Link href="/" passHref>
                   <button
-                    className="text-sm lg:text-base w-fit px-6 py-3 cursor-pointer rounded-full 
-                      bg-gradient-to-r from-[#4A6B48] to-[#8C8A62] 
+                    className={`text-sm lg:text-base w-fit px-6 py-3 cursor-pointer rounded-full 
                       flex items-center font-semibold text-white shadow-md
-                      transition-all duration-300 ease-in-out
-                      hover:from-[#997452] hover:to-[#997452] hover:shadow-lg"
+                      transition-all duration-300 ease-in-out ${buttonClasses}`}
                     aria-label={feature.buttonText}
                   >
                     {feature.buttonText}
@@ -118,18 +130,18 @@ const FeaturesSentment: React.FC = () => {
               </div>
 
               {/* Image Section */}
-              <div className="w-full md:w-[45%] xl:w-fit relative">
+              <div className="w-full md:w-[45%] xl:w-fit relative flex justify-center items-center z-10">
                 <Image
                   src={feature.img}
-                  width={500}
-                  height={500}
+                  width={450}
+                  height={450}
                   alt={`${feature.titleWhite} ${feature.titleBrown} feature image`}
                   className="object-contain transition-transform duration-500 ease-in-out hover:scale-105 hover:rotate-1"
                 />
               </div>
             </section>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </PageWrapper>
   );
