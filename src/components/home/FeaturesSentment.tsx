@@ -18,7 +18,7 @@ interface Feature {
 export const HomeSentimentData: Feature[] = [
   {
     id: 1,
-    img: "/home/charts_charts.png.png",
+    img: "/home/charts_charts-removebg-preview.png",
     heading: "Comprehensive Sentiment Insights",
     titleWhite: "Customer",
     titleBrown: "Sentiment Analysis",
@@ -28,7 +28,7 @@ export const HomeSentimentData: Feature[] = [
   },
   {
     id: 2,
-    img: "/home/sentiment-charts.png.png",
+    img: "/home/processing-ai.png",
     heading: "AI-Powered Language Processing",
     titleWhite: "Natural Language",
     titleBrown: "Processing Engine",
@@ -48,7 +48,7 @@ export const HomeSentimentData: Feature[] = [
   },
   {
     id: 4,
-    img: "/home/sentiment-bg.png",
+    img: "/home/collection-charts.png",
     heading: "Customizable Sentiment Collections",
     titleWhite: "Sentiment",
     titleBrown: "Collection Tools",
