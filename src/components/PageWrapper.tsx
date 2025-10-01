@@ -8,7 +8,7 @@ type PageWrapperProps = {
 };
 
 const PageWrapper: React.FC<PageWrapperProps> = ({
-  background = "bg-[#0D0E10]",
+  background = newFunction(),
   container = "normal",
   padding = "normal",
   children,
@@ -35,3 +35,7 @@ const PageWrapper: React.FC<PageWrapperProps> = ({
 };
 
 export default PageWrapper;
+
+function newFunction(): string | undefined {
+  return "bg-[#0D0E10]";
+}
