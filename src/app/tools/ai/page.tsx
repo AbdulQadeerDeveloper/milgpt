@@ -30,7 +30,7 @@ const AIToolsPage = () => {
                 AI-powered writing tools like ChatGPT and Jasper.
               </p>
               <Link
-                href="#"
+                href="/milgpt"
                 className="px-6 py-3 bg-[#4A6B48] rounded-lg font-semibold hover:bg-[#39553a] transition-colors"
               >
                 Explore Tools
@@ -65,7 +65,7 @@ const AIToolsPage = () => {
                 AI-powered tools like MidJourney and DALL·E.
               </p>
               <Link
-                href="#"
+                href="/milgpt"
                 className="px-6 py-3 bg-[#4A6B48] rounded-lg font-semibold hover:bg-[#39553a] transition-colors"
               >
                 Explore Tools
@@ -84,7 +84,7 @@ const AIToolsPage = () => {
                 Synthesia, Pictory, and Runway.
               </p>
               <Link
-                href="#"
+                href="/milgpt"
                 className="px-6 py-3 bg-[#4A6B48] rounded-lg font-semibold hover:bg-[#39553a] transition-colors"
               >
                 Explore Tools
@@ -117,7 +117,7 @@ const AIToolsPage = () => {
                 AI-powered productivity apps.
               </p>
               <Link
-                href="#"
+                href="/milgpt"
                 className="px-6 py-3 bg-[#4A6B48] rounded-lg font-semibold hover:bg-[#39553a] transition-colors"
               >
                 Explore Tools
@@ -138,7 +138,7 @@ const AIToolsPage = () => {
                 chatbots like Intercom and Drift.
               </p>
               <Link
-                href="#"
+                href="/milgpt"
                 className="px-6 py-3 bg-[#4A6B48] rounded-lg font-semibold hover:bg-[#39553a] transition-colors"
               >
                 Explore Tools
@@ -171,7 +171,7 @@ const AIToolsPage = () => {
                 analytics platforms.
               </p>
               <Link
-                href="#"
+                href="/milgpt"
                 className="px-6 py-3 bg-[#4A6B48] rounded-lg font-semibold hover:bg-[#39553a] transition-colors"
               >
                 Explore Tools
