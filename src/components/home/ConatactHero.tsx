@@ -1,5 +1,6 @@
 // components/ConatctHero.tsx
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ContactHero() {
   return (
@@ -20,7 +21,8 @@ export default function ContactHero() {
       <div className="relative bg-gradient-to-r from-[#4A6B48] to-[#8C8A62] text-center px-18 py-4">
         <h1 className="text-white text-3xl md:text-4xl font-bold">Conatct</h1>
         <p className="text-white text-sm mt-2">
-          Home <span className="mx-1">&gt;</span> Contact
+          <Link href="/">Home</Link>
+          <span className="mx-1">&gt;</span> Contact
         </p>
       </div>
     </section>

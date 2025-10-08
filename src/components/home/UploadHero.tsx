@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function AboutHero() {
+export default function UploadHero() {
   return (
     <section className="relative h-[350px] w-full flex items-center justify-center">
       {/* Background Image */}
@@ -19,11 +19,11 @@ export default function AboutHero() {
 
       {/* Content Box */}
       <div className="relative bg-gradient-to-r from-[#4A6B48] to-[#8C8A62] text-center px-18 py-4">
-        <h1 className="text-white text-3xl md:text-4xl font-bold">ABOUT</h1>
+        <h1 className="text-white text-3xl md:text-4xl font-bold">
+          Upload Project
+        </h1>
         <p className="text-white text-sm mt-2">
-          <Link href="/">Home</Link>
-          <span className="mx-1">&gt;</span>
-          About
+          <Link href="/">Home</Link> <span className="mx-1">&gt;</span> Project
         </p>
       </div>
     </section>

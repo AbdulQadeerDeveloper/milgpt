@@ -6,10 +6,13 @@ import Hero from "@/components/home/Hero";
 import Pricing from "@/components/home/Pricing";
 import FeaturesSentiment from "@/components/home/FeaturesSentment";
 import { HomeFaqsData } from "@/constants/Data";
+import Navbar from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
+      <Navbar />
       <Hero />
       <Features />
       <FeaturesSentiment />
@@ -17,6 +20,7 @@ export default function Home() {
       <Pricing />
       <Faqs faqs={HomeFaqsData} />
       <Grid />
+      <Footer />
     </>
   );
 }

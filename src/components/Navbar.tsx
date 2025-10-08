@@ -7,10 +7,10 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null); // Desktop
+  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<number | null>(
     null
-  ); // Mobile
+  );
 
   const links = [
     { name: "Home", href: "/" },
@@ -25,21 +25,12 @@ const Navbar = () => {
         { title: "Developer Tools", href: "/tools/developer" },
       ],
     },
-    {
-      name: "Community",
-      href: "/community",
-      submenu: [
-        { title: "Forums", href: "/community/forums" },
-        { title: "Events", href: "/community/events" },
-        { title: "Blogs", href: "/community/blogs" },
-        { title: "Contributors", href: "/community/contributors" },
-      ],
-    },
-    { name: "Affiliate", href: "/affiliate" },
-    { name: "API", href: "/api" },
+    { name: "Services", href: "/services" },
+    { name: "Submit Project", href: "/submit-project" },
+    { name: "Contact us", href: "/contact" },
   ];
 
-  // Lock scroll when mobile menu is open
+  // prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
@@ -94,10 +85,17 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* Contact Button */}
+          {/* Right buttons */}
           <div className="flex items-center gap-6">
-            <Link href="/contact">
-              <p className="font-semibold text-sm md:text-base">Contact us</p>
+            <Link href="/auth/login">
+              <p className="font-semibold text-sm md:text-base hover:text-[#4A6B48] transition-colors">
+                Sign In
+              </p>
+            </Link>
+            <Link href="/auth/register">
+              <p className="font-semibold text-sm md:text-base px-4 py-2 rounded bg-[#4A6B48] hover:bg-[#3b5639] transition-colors">
+                Sign Up
+              </p>
             </Link>
           </div>
         </div>
@@ -105,12 +103,9 @@ const Navbar = () => {
 
       {/* Mobile Navbar */}
       <nav className="flex lg:hidden w-full h-[90px] sticky top-0 bg-background z-30 px-4 md:px-8 justify-between items-center">
-        {/* Logo */}
         <Link href="/" className="text-xl font-bold text-white">
           MilGPT
         </Link>
-
-        {/* Hamburger */}
         <GiHamburgerMenu
           onClick={() => setIsOpen(true)}
           className="w-6 h-6 cursor-pointer text-white"
@@ -123,14 +118,11 @@ const Navbar = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Top bar: logo left, close right */}
+        {/* Top bar */}
         <div className="flex justify-between items-center p-4 border-b border-white/20">
-          {/* Left: Logo */}
           <Link href="/" className="text-xl font-bold">
             MilGPT
           </Link>
-
-          {/* Right: Close */}
           <IoClose
             className="w-7 h-7 cursor-pointer"
             onClick={() => setIsOpen(false)}
@@ -165,7 +157,6 @@ const Navbar = () => {
                 )}
               </div>
 
-              {/* Mobile Dropdown */}
               {link.submenu && mobileDropdownOpen === index && (
                 <ul className="pl-4 mt-2 flex flex-col gap-2">
                   {link.submenu.map((item, subIndex) => (
@@ -185,10 +176,17 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Contact Button */}
-        <div className="flex justify-start md:justify-end gap-10 py-2 px-6">
-          <Link href="/contact" onClick={() => setIsOpen(false)}>
-            <p className="font-semibold text-base">Contact us</p>
+        {/* Mobile auth buttons */}
+        <div className="flex flex-col gap-4 px-6 py-4 border-t border-white/20">
+          <Link href="/login" onClick={() => setIsOpen(false)}>
+            <p className="font-semibold text-base hover:text-[#4A6B48]">
+              Sign In
+            </p>
+          </Link>
+          <Link href="/register" onClick={() => setIsOpen(false)}>
+            <p className="font-semibold text-base px-4 py-2 rounded bg-[#4A6B48] hover:bg-[#3b5639] text-center transition-colors">
+              Sign Up
+            </p>
           </Link>
         </div>
       </div>

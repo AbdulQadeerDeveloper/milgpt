@@ -1,8 +1,24 @@
+"use client";
+
 import React from "react";
 import PageWrapper from "@/components/PageWrapper";
 import { BsStars } from "react-icons/bs";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
+
+  const handleGenerate = () => {
+    // Check login status (example: from localStorage)
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      router.push("/milgpt"); // logged in → go to milgpt page
+    } else {
+      router.push("/auth/login"); // not logged in → redirect to login
+    }
+  };
+
   return (
     <PageWrapper background="bg-[url('/home/heroBG.svg')] bg-center bg-no-repeat bg-cover">
       {/* background effects */}
@@ -37,11 +53,12 @@ const Hero = () => {
 
           {/* Button */}
           <button
+            onClick={handleGenerate}
             className="w-full sm:w-auto px-4 py-2 sm:px-6 sm:py-3 rounded-full 
-     flex items-center justify-center gap-2 sm:gap-3 
-     bg-[#4A6B48] text-white font-medium shadow-md 
-     transition-all duration-300 ease-in-out
-     hover:bg-[#997452] hover:shadow-lg mx-auto sm:mx-0"
+              flex items-center justify-center gap-2 sm:gap-3 
+              bg-[#4A6B48] text-white font-medium shadow-md 
+              transition-all duration-300 ease-in-out
+              hover:bg-[#997452] hover:shadow-lg mx-auto sm:mx-0"
           >
             <BsStars className="text-lg sm:text-xl" />
             <span className="text-sm sm:text-base">Generate</span>
