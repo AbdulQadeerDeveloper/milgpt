@@ -3,7 +3,7 @@
 import React from "react";
 import PageWrapper from "../PageWrapper";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface Feature {
   id: number;
@@ -59,9 +59,22 @@ export const HomeSentimentData: Feature[] = [
 ];
 
 const FeaturesSentment: React.FC = () => {
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      router.push("/milgpt"); // logged in → go to milgpt
+    } else {
+      router.push("/auth/login"); // not logged in → go to login
+    }
+  };
+
   return (
     <PageWrapper>
       <div className="w-full flex flex-col gap-16 2xl:gap-24 z-10 items-center">
+        {/* Section Heading */}
         <div className="w-full flex flex-col gap-4 lg:gap-4 lg:max-w-[700px] mx-auto items-center justify-center ">
           <h2 className="text-2xl md:text-3xl 2xl:text-4xl uppercase font-bold text-[#fff]">
             Sentiment <span className="text-[#997452]">Analysis</span>
@@ -72,8 +85,10 @@ const FeaturesSentment: React.FC = () => {
             unit structures through voice or text — anytime, anywhere.
           </p>
         </div>
+
+        {/* Features List */}
         {HomeSentimentData.map((feature) => {
-          // Conditional button styles
+          // Conditional button color
           const buttonClasses =
             feature.id === 1 || feature.id === 3
               ? "bg-gradient-to-r from-[#4A6B48] to-[#8C8A62] hover:from-[#997452] hover:to-[#997452]"
@@ -83,13 +98,15 @@ const FeaturesSentment: React.FC = () => {
             <section
               key={feature.id}
               className={`relative w-full max-w-[1308px] min-h-[388px] 
-    flex ${feature.id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}
-    flex-col items-start justify-between gap-6 lg:gap-10
-    px-[60px] py-[60px] 
-    bg-[#0d0e10] border border-[#997452] rounded-[25px]
-    shadow-[0px_12.58px_35.93px_0px_#99745240] overflow-hidden`}
+                flex ${
+                  feature.id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                }
+                flex-col items-start justify-between gap-6 lg:gap-10
+                px-[60px] py-[60px] 
+                bg-[#0d0e10] border border-[#997452] rounded-[25px]
+                shadow-[0px_12.58px_35.93px_0px_#99745240] overflow-hidden`}
             >
-              {/* Decorative Background Images */}
+              {/* Decorative Backgrounds */}
               <Image
                 src="/home/GreenStain.svg"
                 alt="decor top left"
@@ -117,16 +134,17 @@ const FeaturesSentment: React.FC = () => {
                 <p className="text-base lg:text-[12px]">
                   {feature.description}
                 </p>
-                <Link href="/" passHref>
-                  <button
-                    className={`text-sm lg:text-base w-fit px-6 py-3 cursor-pointer rounded-full 
-                      flex items-center font-semibold text-white shadow-md
-                      transition-all duration-300 ease-in-out ${buttonClasses}`}
-                    aria-label={feature.buttonText}
-                  >
-                    {feature.buttonText}
-                  </button>
-                </Link>
+
+                {/* Login Check Button */}
+                <button
+                  onClick={handleButtonClick}
+                  className={`text-sm lg:text-base w-fit px-6 py-3 cursor-pointer rounded-full 
+                    flex items-center font-semibold text-white shadow-md
+                    transition-all duration-300 ease-in-out ${buttonClasses}`}
+                  aria-label={feature.buttonText}
+                >
+                  {feature.buttonText}
+                </button>
               </div>
 
               {/* Image Section */}
