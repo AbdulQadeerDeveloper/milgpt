@@ -78,13 +78,16 @@ export default function Sidebar({ isOpen, onNewChat }: SidebarProps) {
             <Image
               src={user.picture}
               alt={user.name}
-              className="w-8 h-8 rounded-full object-cover"
+              width={32} // 8 * 4px (Tailwind w-8)
+              height={32} // 8 * 4px (Tailwind h-8)
+              className="rounded-full object-cover"
             />
           ) : (
             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-600 to-emerald-700 flex items-center justify-center">
               <Shield size={18} />
             </div>
           )}
+
           <div className="flex-1 min-w-0">
             <div className="text-sm font-medium truncate text-gray-200">
               {user?.name || "Loading..."}

@@ -17,7 +17,7 @@ const Navbar = () => {
     { name: "About", href: "/about" },
     {
       name: "Tools",
-      href: "/tools",
+      href: "/tools/developer",
       submenu: [
         { title: "AI Tools", href: "/tools/ai" },
         { title: "Productivity Tools", href: "/tools/productivity" },
